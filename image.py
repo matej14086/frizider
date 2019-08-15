@@ -58,6 +58,7 @@ while True:
         im =  im.crop((30,50,230,250))
         im = im.resize((28,28))
         im =  im.convert("RGB")
+        im.save("check.jpg")
         im = np.array(im)[:,:,1]/255
         im = im.reshape((1,28,28,1))
         pred = model.predict(im).argmax()
