@@ -73,6 +73,8 @@ while True:
         lines[1] = str(np.mean(otpori)) + " \n"
         lines[2] = status
         
+        otpor_graf.append(np.mean(otpori))
+        temp_graf.append(pred)
         otpori = []
 
         with open("README.md", "w") as f:
