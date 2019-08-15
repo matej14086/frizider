@@ -64,7 +64,7 @@ while True:
         temp = lines[0].split(" ")
         temp[2] = str(pred) + "\n"
         lines[0] = " ".join(temp)
-        lines[1] = str(np.mean(otpori))
+        lines[1] = str(np.mean(otpori)) + "\n"
         lines[2] = status
         
         otpori = []
