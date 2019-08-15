@@ -16,7 +16,7 @@ import collections
 from keras.models import load_model
 model = load_model('digits.h5')
 
-ser = serial.Serial('COM8', 9600) 
+ser = serial.Serial('COM8', 9600, timeout = 8) 
 
 file = open("data/OtporData.txt","a")
 fileT = open("data/TempData.txt","a")
