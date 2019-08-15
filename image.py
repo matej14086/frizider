@@ -86,13 +86,14 @@ while True:
         plt.clf()
         plt.close()
         plt.plot(temp_graf)
-        
+        plt.title(time.ctime() +" temperatura je " + str(pred))
         plt.savefig("images/temp.jpg")
+        
         plt.clf()
         plt.close()
         print("Pushing to git")
 
-        os.system("git add .")
+        os.system("git add -A")
         os.system("git commit -m 'auto'")
         os.system("git push")
         
