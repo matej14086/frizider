@@ -83,12 +83,14 @@ while True:
         plt.plot(otpor_graf)
         plt.savefig("images/otpor.jpg")
         plt.clf()
+        plt.close()
         plt.plot(temp_graf)
         
         plt.savefig("images/temp.jpg")
         plt.clf()
+        plt.close()
         print("Pushing to git")
-        plt.savefig
+
         os.system("git add .")
         os.system("git commit -m 'auto'")
         os.system("git push")
