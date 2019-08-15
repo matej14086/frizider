@@ -1,5 +1,5 @@
 Frizider live: 5
-21217.61666666667 
+21164.575 
 0
 Temperatura:
 
