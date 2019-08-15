@@ -1,7 +1,6 @@
 Frizider live: 5
-19941.6499999999981
-![alt text](https://raw.githubusercontent.com/matej14086/frizider/master/images/temp.jpg)
-
+nan 
+1
 
 Otpor:
 

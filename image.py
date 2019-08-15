@@ -7,8 +7,10 @@ Created on Thu Aug 15 15:58:54 2019
 import numpy as np
 from PIL import Image
 import os
+import matplotlib.pyplot as plt
 import serial
 import time
+import collections
 
 
 from keras.models import load_model
@@ -21,6 +23,10 @@ fileT = open("data/TempData.txt","a")
 otpori = []
 temps = []
 num_files = len(os.listdir("data"))
+
+otpor_graf = collections.deque(maxlen=100)
+temp_graf = collections.deque(maxlen=100)
+
 
 ser.flush()
 while True:
@@ -64,7 +70,7 @@ while True:
         temp = lines[0].split(" ")
         temp[2] = str(pred) + "\n"
         lines[0] = " ".join(temp)
-        lines[1] = str(np.mean(otpori)) + "\n"
+        lines[1] = str(np.mean(otpori)) + " \n"
         lines[2] = status
         
         otpori = []
@@ -72,8 +78,16 @@ while True:
         with open("README.md", "w") as f:
             f.writelines(lines)
         
+        plt.plot(otpor_graf)
+        plt.savefig("images/otpor.jpg")
+        plt.clf()
+        plt.plot(temp_graf)
+        
+        plt.savefig("images/temp.jpg")
+        plt.clf()
         print("Pushing to git")
-
+        plt.savefig
         os.system("git add .")
         os.system("git commit -m 'auto'")
         os.system("git push")
+        
