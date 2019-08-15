@@ -71,7 +71,7 @@ while True:
         temp[2] = str(pred) + "\n"
         lines[0] = " ".join(temp)
         lines[1] = str(np.mean(otpori)) + " \n"
-        lines[2] = status
+        lines[2] = status + "\n"
         
         otpor_graf.append(np.mean(otpori))
         temp_graf.append(pred)
