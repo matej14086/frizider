@@ -20,14 +20,14 @@ ser = serial.Serial('COM8', 9600, timeout = 8)
 
 file = open("data/OtporData.txt","a")
 fileT = open("data/TempData.txt","a")
-file = open("data/TempData.txt","a")
+fileS = open("data/StatData.txt","a")
 otpori = []
 temps = []
 num_files = len(os.listdir("data"))
 
 otpor_graf = collections.deque(maxlen=100)
 temp_graf = collections.deque(maxlen=100)
-
+s_graf = collections.deque(maxlen=100)
 
 ser.flush()
 while True:
@@ -70,6 +70,7 @@ while True:
                 
         temps.append(pred)
         fileT.write(time.ctime() +" " + str(pred) + "\n")
+        fileS.write(time.ctime() +" " + str(status) + "\n")
         with open("README.md") as f:
             lines = f.readlines()
             
