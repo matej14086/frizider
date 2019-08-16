@@ -1,6 +1,6 @@
 Frizider live: 1
-20741.925000000003 
-1
+21687.491666666665 
+0
 Temperatura:
 
 ![alt text](https://raw.githubusercontent.com/matej14086/frizider/master/images/temp.jpg?)

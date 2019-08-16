@@ -20,6 +20,7 @@ ser = serial.Serial('COM8', 9600, timeout = 8)
 
 file = open("data/OtporData.txt","a")
 fileT = open("data/TempData.txt","a")
+file = open("data/TempData.txt","a")
 otpori = []
 temps = []
 num_files = len(os.listdir("data"))
