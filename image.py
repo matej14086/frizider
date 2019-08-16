@@ -82,6 +82,7 @@ while True:
         
         otpor_graf.append(np.mean(otpori))
         temp_graf.append(pred)
+        s_graf.append(int(status))
         otpori = []
 
         with open("README.md", "w") as f:
@@ -95,6 +96,12 @@ while True:
         plt.title(time.ctime() +" temperatura je " + str(pred))
         plt.savefig("images/temp.jpg")
         
+        plt.clf()
+        plt.close()
+                
+        
+        plt.plot(s_graf)
+        plt.savefig("images/status.jpg")
         plt.clf()
         plt.close()
         print("Pushing to git")

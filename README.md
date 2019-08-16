@@ -1,9 +1,14 @@
-Frizider live: 4
-21684.925000000003 
+Frizider live: 1
+20811.5 
 0
 Temperatura:
 
 ![alt text](https://raw.githubusercontent.com/matej14086/frizider/master/images/temp.jpg?)
+
+
+ON/OFF:
+
+![alt text](https://raw.githubusercontent.com/matej14086/frizider/master/images/status.jpg?)
 
 
 Otpor:
