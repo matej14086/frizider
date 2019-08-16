@@ -60,6 +60,10 @@ while True:
         im =  im.convert("RGB")
         im.save("check.jpg")
         im = np.array(im)[:,:,1]/255
+        up = im > 0.8
+        im = np.zeros_like(im)
+        im[up] = 1
+
         im = im.reshape((1,28,28,1))
         pred = model.predict(im).argmax()
                 
