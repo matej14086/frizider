@@ -1,5 +1,5 @@
-Frizider live: 7
-20324.833333333336 
+Frizider live: 3
+20094.941666666666 
 1
 Temperatura:
 
