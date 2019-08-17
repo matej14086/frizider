@@ -1,5 +1,5 @@
 Frizider live: 3
-20999.050000000003 
+20908.675 
 1
 Temperatura:
 
